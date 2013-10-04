@@ -1,0 +1,21 @@
+/cache
+/vendor
+composer.lock
+composer.phar
+# IDE generated files
+.idea
+*.bak
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+# Apache config
+.htaccess
+.htpasswd

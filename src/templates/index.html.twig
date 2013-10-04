@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <title>RESTFul API Test</title>
+</head>
+<body>
+    <a href="#" class="retrieve">Retrieve comments</a>
+    <script>
+        $(document).ready(function(){
+            $.ajax({
+                type: "POST",
+                url: "api/comments",
+                dataType:"json",
+                data: {
+                    username: "Manuel González",
+                    thumbnail: "path/to/thumbnail.jpg",
+                    comment: "example comment"
+                },
+                success: function(data){
+                    console.log(data);
+                }
+            });
+
+            $('.retrieve').click(function(e){
+                e.preventDefault();
+                $.ajax({
+                    type: "GET",
+                    url: "api/comments",
+                    dataType:"json",
+                    success: function(data){
+                        console.log(data);
+                    }
+                });
+            });
+
+        });
+    </script>
+</body>
+</html>
