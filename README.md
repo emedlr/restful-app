@@ -16,25 +16,20 @@ Routes
 This service open the doors through two ways:
 
 
-1. Recieves a JSON object post call and saves it into database.
+* Recieves a JSON object post call and saves it into database.
 
-Route: `/api/comments`
+	Route: `/api/comments`
+	Method: `POST`
 
-Method: `POST`
+* Fetch all comments from database and returns it as JSON object.
 
+	Route: `/api/comments`
+	Method: `GET`
 
-2. Fetch all comments from database and returns it as JSON object.
+* There is a third route that allows you to test the service, with a simple jQuery `$.ajax` function.
 
-Route: `/api/comments`
-
-Method: `GET`
-
-
-3. There is a third route that allows you to test the service, with a simple jQuery `$.ajax` function.
-
-Route: `/test`
-
-Method: `GET`
+	Route: `/test`
+	Method: `GET`
 
 
 Comments, ideas
